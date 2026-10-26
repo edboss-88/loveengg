@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Sweetheart 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffeef2 0%, #e8f4ff 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card-container {
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
+            max-width: 480px;
+            width: 100%;
+            padding: 25px;
+            text-align: center;
+            border: 3px solid #ffd1dc;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+        .photo-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* -------------------------------------------------- */
+        /* ปรับรูปภาพให้ขยายเต็มพื้นที่กรอบ                     */
+        /* -------------------------------------------------- */
+        .photo-item img {
+            width: 100%;        /* ขยายรูปเต็มความกว้าง */
+            height: auto;       /* ให้ความสูงปรับตามสัดส่วนรูป */
+            display: block;
+            border-radius: 20px;
+        }
+
+        .title {
+            color: #ff6b8b;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #4a90e2;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .message-btn {
+            background: linear-gradient(45deg, #ff8da1, #ff6b8b);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.3);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .message-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 139, 0.5);
+        }
+
+        .letter-box {
+            display: none;
+            margin-top: 20px;
+            background: #fff8f9;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px dashed #ffb6c1;
+            color: #555;
+            line-height: 1.6;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="img/watermarked_img_3768228444580489834.jpg" alt="Blue Rose Bouquet">
+            </div>
+            <div class="photo-item">
+                <img src="img/5A5A2F48-685A-4579-B11A-02755C7D1D48.jpg" alt="Photo 1">
+            </div>
+            <div class="photo-item">
+                <img src="img/5A182838-7E5F-42E0-AE5E-976A9B6AFE6F.jpg" alt="Photo 2">
+            </div>
+        </div>
+
+        <h1 class="title">My Melody Blue Rose 💙✨</h1>
+        <p class="subtitle">A special bouquet made just for you</p>
+
+        <button class="message-btn" onclick="toggleLetter()">กดเปิดอ่านจดหมาย 💌</button>
+
+        <div class="letter-box" id="letter">
+            <p style="font-weight: bold; color: #ff6b8b; margin-bottom: 10px;">ถึงอ้วนคนเก่ง 💕</p>
+            <p>เค้าตั้งใจมอบดอกกุหลาบสีฟ้า My Melody ช่อนี้ให้อ้วนนะ ขอให้อ้วนมีความสุข มีรอยยิ้มในทุกๆ วัน รักนะอ้วน 🥰</p>
+        </div>
+
+        <footer>Made with ❤️ for you</footer>
+    </div>
+
+    <script>
+        function toggleLetter() {
+            var letter = document.getElementById("letter");
+            if (letter.style.display === "block") {
+                letter.style.display = "none";
+            } else {
+                letter.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
